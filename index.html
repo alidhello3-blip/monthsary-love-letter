@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Monthsary, My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffc0d9, #ffe6f0, #ffb6c9);
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 25px 15px;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    color: #ff4f87;
+    animation: float 8s linear infinite;
+    font-size: 25px;
+    z-index: 0;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 60%; animation-delay: 4s; }
+.hearts span:nth-child(4) { left: 85%; animation-delay: 1s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.envelope {
+    font-size: 85px;
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.12); }
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #9c315a;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #e84378;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #d98ba5;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    background: #c72c62;
+}
+
+.letter {
+    display: none;
+    background: #fffafa;
+    padding: 30px 23px;
+    border-radius: 22px;
+    margin-top: 20px;
+    box-shadow: 0 8px 30px #d98ba5;
+    animation: appear 1s ease;
+    text-align: center;
+}
+
+.letter.show {
+    display: block;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+    color: #f04478;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.letter h2 {
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    color: #654;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.signature {
+    color: #d6336c;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer {
+    margin-top: 20px;
+    color: #a83260;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>💗</span>
+    <span>💕</span>
+    <span>💖</span>
+    <span>💗</span>
+</div>
+
+<div class="container">
+
+    <div class="envelope">💌</div>
+
+    <h1>Happy Monthsary, My Love! 💖</h1>
+
+    <p class="subtitle">
+        I made something special just for you.
+    </p>
+
+    <button onclick="openLetter()">
+        Open Your Love Letter 💌
+    </button>
+
+    <div class="letter" id="letter">
+
+        <div class="heart">♥</div>
+
+        <h2>To My Rain abadinas</h2>
+
+        <p>My Love,</p>
+
+        <p>
+        Happy Monthsary to us! ❤️
+        I just want to remind you how grateful I am
+        to have you in my life. Every moment with you
+        is something I treasure, even the simplest
+        conversations and little memories we share.
+        </p>
+
+        <p>
+        I know that our relationship won't always
+        be perfect. There may be misunderstandings,
+        difficult days, and moments when we feel tired.
+        But I want you to know that I am willing to
+        understand you, listen to you, and grow with you.
+        </p>
+
+        <p>
+        I don't promise a perfect relationship,
+        but I promise to keep choosing honesty,
+        loyalty, patience, and respect.
+        I want us to build a beautiful future
+        together, one day at a time.
+        </p>
+
+        <p>
+        Thank you for being part of my life.
+        Thank you for every smile, every laugh,
+        and every memory. You are someone I never
+        want to take for granted.
+        </p>
+
+        <p>
+        No matter how many months pass,
+        I hope we never stop appreciating
+        the little things that make our love special.
+        </p>
+
+        <p>
+        I love you today, tomorrow, and in all
+        the days that are still waiting for us. 💗
+        </p>
+
+        <div class="signature">
+            Forever Yours,<br>
+            Your Loving Boyfriend ❤️
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with love, Rain Abadinas. 💕
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("letter");
+    letter.classList.add("show");
+
+    document.querySelector("button").style.display = "none";
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+</script>
+
+</body>
+</html>
